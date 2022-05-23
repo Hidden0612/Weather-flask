@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Weather</title>
+    <link href="{{ url_for('static', filename= 'css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <h1> Weather : {{city}}</h1>
+    {% if (status == "day" and stat in("Clear","Dust")) or status == "day" %}
+    <div class="hot">
+        <span class="sun"></span>
+        <span class="sunx"></span>
+        <span class="sunx"></span>
+        <ul>
+            <li>{{stat}}</li>
+            <li>{{statS}}</li>
+            <li>Sunrise: {{Sunrise}}</li>
+            <li>Sunset: {{Sunset}}</li>
+        </ul>
+    </div>
+    {% elif stat == "Clouds" %}
+    <div class="cloudy">
+        <span class="cloud"></span>
+        <span class="cloudx"></span>
+        <ul>
+            <li>{{stat}}</li>
+            <li>{{statS}}</li>
+            <li>Sunrise: {{Sunrise}}</li>
+            <li>Sunset: {{Sunset}}</li>
+        </ul>
+    </div>
+    {% elif stat in ("Snowy","Stormy") %}
+    <div class="stormy">
+        <ul>
+            <li>{{stat}}</li>
+            <li>{{statS}}</li>
+            <li>Sunrise: {{Sunrise}}</li>
+            <li>Sunset: {{Sunset}}</li>
+        </ul>
+        <span class="snowe"></span>
+        <span class="snowex"></span>
+        <span class="stick"></span>
+        <span class="stick2"></span>
+    </div>
+    {% elif stat == "Rain" %}
+    <div class="breezy">
+        <ul>
+            <li>{{stat}}</li>
+            <li>{{statS}}</li>
+            <li>Sunrise: {{Sunrise}}</li>
+            <li>Sunset: {{Sunset}}</li>
+        </ul>
+        <span class="cloudr"></span>
+
+
+    </div>
+    {% elif (status == "night" and stat in("Clear","Dust")) or status == "night" %}
+    <div class="night">
+        <span class="moon"></span>
+        <span class="spot1"></span>
+        <span class="spot2"></span>
+        <ul>
+            <li>{{stat}}</li>
+            <li>{{statS}}</li>
+            <li>Sunrise: {{Sunrise}}</li>
+            <li>Sunset: {{Sunset}}</li>
+        </ul>
+
+    </div>
+    {% endif %}
+</body>
+
+</html>
