@@ -1,7 +1,13 @@
 # Weather-flask
 
-## Docs Weather:
-openweathermap.org/api/one-call-3
+## Installation
+https://openweathermap.org/api/one-call-3
+```sh
+pip install flask
+```
+```sh
+pip install requests
+```
 
 # Telegram Support 
 * Admin : @Hiddne0612
@@ -10,11 +16,3 @@ openweathermap.org/api/one-call-3
 
 # Youtube
 * Youtube.com/c/Hidden0612
-
-## Installation
-```sh
-pip install flask
-```
-```sh
-pip install requests
-```
